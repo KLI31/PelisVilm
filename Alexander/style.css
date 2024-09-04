@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.nav-bar{
+    background-color: #191f37;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.nav-bar .nav-bar-logo h1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    margin: 0 60px;
+    cursor: pointer;
+}
+.nav-bar .nav-bar-logo h1{
+    text-shadow: 
+        -4px -4px 0 #000, /* Sombra superior izquierda */
+         4px -4px 0 #000, /* Sombra superior derecha */
+        -4px  4px 0 #000, /* Sombra inferior izquierda */
+         4px  4px 0 #000; /* Sombra inferior derecha */
+}
+.nav-bar .nav-bar-search{
+    margin: 0 70px;
+    overflow: hidden;
+    background-color: white;
+    border-top-left-radius: 30px ;
+    border-bottom-left-radius:30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-right-radius:30px ;
+
+}
+.nav-bar-search input{
+    border: none;
+    background-color: white;
+    padding: 10px 0px 10px 10px;
+    border-radius: 3px;
+    outline: none;
+    border-top-left-radius: 30px ;
+    border-bottom-left-radius:30px ;
+}
+.nav-bar-search button{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 30px ;
+    border-bottom-right-radius:30px ;
+}
+.nav-bar-search button .fas fa-search{
+    border-color:white;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .nav-bar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-bar .nav-bar-logo h1 a {
+        font-size: 30px; /* Ajuste para pantallas más pequeñas */
+        margin: 0; /* Reducir márgenes en pantallas pequeñas */
+    }
+
+    .nav-bar .nav-bar-search {
+        width: 100%; /* Barra de búsqueda más ancha en pantallas pequeñas */
+        margin-top: 10px;
+    }
+    .nav-bar-search input{
+        margin: 0 270px 0 0;    
+    }
+    
+}
