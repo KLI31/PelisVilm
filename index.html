@@ -4,15 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Slider section</title>
+    <meta name="description"
+        content="Explora nuestra gran colección de películas. Disfruta de imágenes de alta calidad y sin publicidad">
+    <title>Vilm Movie</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <main class="swiper">
-        <div class="swiper-wrapper" id="result">
-            <div class="swiper-pagination"></div>
+    <header class="navbar">
+        <div class="navbar_logo">
+            <h1 class="borde-tex"><a href="#">Vilm</a></h1>
+        </div>
+
+        <div class="navbar_search">
+            <input type="text" placeholder="Busca tu peli favorita">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <div>
+        <section class="swiper">
+            <div class="swiper-wrapper" id="result">
+                <div class="swiper-pagination"></div>
+        </section>
+    </div>
+
+    <section class="adversting">
+        <h2>Descubre nuestras características</h2>
+        <p>Todo lo que necesitas para disfrutar de tus películas favoritas</p>
+        <div class="platforms">
+            <img src="/Logos/icons8-disney-500.png" alt="Disney+">
+            <img src="/Logos/icons8-amazon-prime-video-500.png" alt="Prime Video">
+            <img src="/Logos/icons8-netflix-500.png" alt="Netflix">
+            <img src="/Logos/google-play-5.svg" alt="Google Play">
+            <img src="/Logos/apple-14.svg" alt="Apple TV">
+            <img src="/Logos/paramount-3.svg" alt="Paramount+">
+            <img src="/Logos/claro.svg" alt="Claro Video">
+        </div>
+        <div class="adversting_content">
+            <div class="adversting_card">
+                <img src="/Logos/icons8-netflix-500.png" alt="DAZN" class="logo">
+                <img src="/Logos/damsel-pelicula-original-netflix-3270454.webp" alt="Batman" class="image">
+                <p class="title">TODO EN UN MISMO LUGAR</p>
+                <h3>Tu guía completa de streaming</h3>
+                <p class="description">Obtén recomendaciones personales para todas tus plataformas de streaming
+                    favoritas. Te mostraremos dónde ver películas, series de TV y deportes.</p>
+            </div>
+            <div class="adversting_card">
+                <img src="/Logos/icons8-disney-500.png" alt="DAZN" class="logo">
+                <img src="/Logos/programacion-tv-halloween-mejores-peliculas-terror-tdt-donde-verlas-3210818.webp"
+                    alt="Severance" class="image">
+                <p class="title">UNA BÚSQUEDA</p>
+                <h3>Todas las plataformas en una única búsqueda</h3>
+                <p class="description">Se acabó buscar y rebuscar entre las distintas plataformas de streaming para
+                    saber si una película o serie ya está disponible. Con una única búsqueda lo encuentras todo.</p>
+            </div>
+            <div class="adversting_card">
+                <img src="/Logos/icons8-amazon-prime-video-500.png" alt="DAZN" class="logo">
+                <img src="/Logos/la_propuesta.webp" alt="Lord of the Rings" class="image">
+                <p class="title">UNA WATCHLIST</p>
+                <h3>Combina todas tus listas en una</h3>
+                <p class="description">Crea una única watchlist con todas las películas y series que quieras ver. Todas
+                    tus plataformas en una única lista en todos tus dispositivos.</p>
+            </div>
+        </div>
+    </section>
+    <main class="container">
+        <div class="movies_slider">
+            <h2>Acción</h2>
+            <section class="swiper_movies">
+                <div class="swiper-wrapper content_image">
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                        <div class="movie_info">
+                            <p>La llorona debajo de tu cama</p>
+                            <span>120 min - Accion </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </section>
+        </div>
+
+        <div class="movies_slider">
+            <h2>Comedia</h2>
+            <section class="swiper_movies">
+                <div class="swiper-wrapper content_image">
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                        <div class="movie_info">
+                            <p>Deadpool 2</p>
+                            <span>100 min - Accion</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </section>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>

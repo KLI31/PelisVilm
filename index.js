@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {});
-
 const result = document.querySelector("#result");
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("navbar_scrolled");
+  } else {
+    navbar.classList.remove("navbar_scrolled");
+  }
+});
 
 // Arreglo que contiene todas las peliculas disponibles, simulando una respuesta de una api
 const HERO_CONTENT = [
@@ -8,7 +17,7 @@ const HERO_CONTENT = [
     title: "Deadpool2",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/image.png",
+    image: "/imagenes/image.png",
     rating: 4.5,
     visitaTotales: 4000,
   },
@@ -16,7 +25,7 @@ const HERO_CONTENT = [
     title: "La Colombiana",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/image2.png",
+    image: "/imagenes/image2.png",
     rating: 4.4,
     visitaTotales: 4000,
   },
@@ -24,7 +33,7 @@ const HERO_CONTENT = [
     title: "Hollow Knight",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/image.png",
+    image: "/imagenes/image.png",
     rating: 4.2,
     visitaTotales: 4000,
   },
@@ -73,4 +82,80 @@ const swiper = new Swiper(".swiper", {
     delay: 3000,
   },
   effect: "fade",
+  navigation: false,
 });
+
+// const SliderMovies = [
+//   {
+//     container: ".swiper_movies_1",
+//     nextEl: ".swiper-button-next-1",
+//     prevEl: ".swiper-button-prev-1",
+//   },
+//   {
+//     container: ".swiper_movies_2",
+//     nextEl: ".swiper-button-next-2",
+//     prevEl: ".swiper-button-prev-2",
+//   },
+// ];
+
+const SliderMovies = new Swiper(".swiper_movies", {
+  loop: false,
+  allowTouchMove: false,
+  // autoplay: {
+  //   delay: 3000,
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  on: {
+    init: function () {
+      toggleButton(this);
+    },
+    slideChange: function () {
+      toggleButton(this);
+    },
+  },
+  slidesPerView: 7,
+  spaceBetween: 12,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 10,
+    },
+    1280: {
+      slidesPerView: 7,
+      spaceBetween: 10,
+    },
+    1440: {
+      slidesPerView: 7,
+      spaceBetween: 0,
+    },
+  },
+  effect: "slide",
+});
+
+function toggleButton(swiper) {
+  const nextButton = swiper.el.querySelector(".swiper-button-next");
+  const prevButton = swiper.el.querySelector(".swiper-button-prev");
+
+  if (swiper.isBeginning) {
+    prevButton.classList.add("swiper_button_hidden");
+  } else {
+    prevButton.classList.remove("swiper_button_hidden");
+  }
+
+  if (swiper.isEnd) {
+    nextButton.classList.add("swiper_button_hidden");
+  } else {
+    nextButton.classList.remove("swiper_button_hidden");
+  }
+}
