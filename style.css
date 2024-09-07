@@ -221,7 +221,6 @@ body::-webkit-scrollbar-thumb {
 .platforms img {
   width: 50px;
   height: 50px;
-  filter: brightness(0) invert(1);
 }
 
 .adversting {
@@ -364,4 +363,51 @@ h2 {
 
 .swiper_button_hidden {
   display: none !important;
+}
+
+footer {
+  text-decoration: none;
+  background-color: #242222;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  flex: 1;
+  text-align: left;
+}
+
+.terms-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.terms-content a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: right;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
 }
