@@ -53,7 +53,7 @@ HERO_CONTENT.forEach((content) => {
                                 <div class="background background_gradient"></div>
                                 <div class="info_content">
                                     <div class="info">
-                                        <h1>${title}</h1>
+                                        <h1 class="title_movie">${title}</h1>
                                         <p class="line_clamp_3">${description}</p>
                                         <div class="section_movie">
                                             <span class="info_content_span">Rating:  ${rating}⭐</span>
