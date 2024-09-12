@@ -116,28 +116,28 @@ const SliderMovies = new Swiper(".swiper_movies", {
       toggleButton(this);
     },
   },
-  slidesPerView: 7,
+  slidesPerView: 2,
   spaceBetween: 12,
   breakpoints: {
     640: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 3,
+      spaceBetween: 12,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 15,
+      slidesPerView: 5,
+      spaceBetween: 6,
     },
     1024: {
-      slidesPerView: 6,
-      spaceBetween: 10,
+      slidesPerView: 5,
+      spaceBetween: 6,
     },
     1280: {
-      slidesPerView: 7,
-      spaceBetween: 10,
+      slidesPerView: 5,
+      spaceBetween: 6,
     },
     1440: {
-      slidesPerView: 7,
-      spaceBetween: 0,
+      slidesPerView: 5,
+      spaceBetween: 6,
     },
   },
   effect: "slide",

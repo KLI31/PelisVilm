@@ -501,10 +501,22 @@ footer {
   .info_content_span{
     font-size: 10px;
   }
+  .platforms{
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .btn{
     width: 100px;
     height:30px;
     font-size: 10px;
+  }
+
+  .footer-content{
+    display: inline;
+  }
+
+  .footer-logo{
+    text-align: center;
   }
 }
