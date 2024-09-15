@@ -17,7 +17,7 @@ const HERO_CONTENT = [
     title: "Deadpool2",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/imagenes/image.png",
+    image: "/imagenes/portada-2.jpeg",
     rating: 4.5,
     visitaTotales: 4000,
   },
@@ -25,7 +25,7 @@ const HERO_CONTENT = [
     title: "La Colombiana",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/imagenes/image2.png",
+    image: "/imagenes/portada-4.jpg",
     rating: 4.4,
     visitaTotales: 4000,
   },
@@ -33,7 +33,7 @@ const HERO_CONTENT = [
     title: "Hollow Knight",
     description:
       "La pelicula de Deadpool es muy divertida ya que tiene escenas graciosas y muy buenas para las personas que son fans de marvel, ademas de que con su ultima pelicula ha roto toda taquilla y sigue siendo un exitaso mundial.",
-    image: "/imagenes/image.png",
+    image: "/imagenes/portada-7.jpeg",
     rating: 4.2,
     visitaTotales: 4000,
   },

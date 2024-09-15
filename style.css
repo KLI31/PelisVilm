@@ -9,6 +9,8 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #1a1919;
   scroll-behavior: smooth;
+  
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -24,6 +26,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #a1a0a0;
   border-radius: 10px;
+  text-decoration: none;
+  
+  
 }
 
 .navbar {
@@ -33,58 +38,87 @@ body::-webkit-scrollbar-thumb {
   height: 75px;
   width: 100%;
   transition: background-color 0.3s ease;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: #1a1919;
-  opacity: 0.8;
   position: fixed;
   top: 0;
   z-index: 40;
+  
 }
 
-.navbar .navbar_logo h1 a {
+
+#movie{
+  color: #FFAF39;
+}
+
+.navbar .navbar_logo h1 a , .footer_logo h2  a{
   text-decoration: none;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   margin: 0 60px;
   cursor: pointer;
 }
 
+.menu{
+  margin-left: -964px;
+  width: 20%;
+}
+.menu ul li{
+  display: inline-block;
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  width: 25%;
+}
+.menu ul li a {
+ text-decoration: none;
+ color: white;  
+}
+
+
+.menu ul li:hover{
+  background-color: #1A1919;
+  padding: 8px 20px 8px 15px;
+  color: white; 
+  border-radius: 20px;
+  transition: 0.5s;
+
+ 
+}
+
+
 .navbar .navbar_search {
   margin: 0 70px;
-  background-color: white;
-  border-radius: 8px;
+  border-radius: 20px;
+  
+}
+.navbar_search input::placeholder{
+  color:#1A1919;
+  font-weight: bold;
+}
+
+.navbar_search input:focus{
+  border: 1px solid #FFAF39 ;
 }
 
 .navbar_search input {
   border: none;
-  background-color: white;
-  padding: 15px 15px;
-  border-radius: 8px;
+  background:rgba(255, 255, 255, 0.741);
+  padding: 11px 41px;
+  border-radius: 20px;
   outline: none;
-}
-.navbar_search button {
-  padding: 15px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  outline: none;
-}
-.navbar_search button .fa-search {
-  border-color: white;
-  font-size: 15px;
-}
-
-.navbar_search button:hover {
-  background-color: #8dbcf1;
   color: white;
-  transition: background-color 0.1s ease-in, color 0.3s ease-in;
+  
 }
 
 .navbar_scrolled {
-  background-color: #e04a52;
+  background-color: #1A1919;
   opacity: 1;
   transition: background-color ease-in 0.3s;
+}
+
+.navbar_scrolled .menu ul li:hover {
+  background-color:#FFAF39;
+  transition: 0.5s;
 }
 
 .section_container {
@@ -148,6 +182,29 @@ body::-webkit-scrollbar-thumb {
   max-width: 30rem;
 }
 
+.btn-play img{
+  border-radius: 50%;
+  background: #FFAF39;
+  height: 36px;
+  position: absolute;
+  bottom: 1rem;
+  left: 11.5rem;
+}
+
+.movie_info h2{
+  font-size: 30px;
+ 
+}
+
+
+
+
+
+.efecto:hover{
+  transform: scale(1.05);
+}
+
+
 .section_movie {
   display: flex;
   align-items: center;
@@ -157,7 +214,7 @@ body::-webkit-scrollbar-thumb {
 .btn {
   padding: 10px 30px;
   border: none;
-  background-color: rgb(248, 70, 70);
+  background-color: #FFAF39;
   color: white;
   border-radius: 6px;
   margin-top: 10px;
@@ -201,12 +258,12 @@ body::-webkit-scrollbar-thumb {
 
 .swiper-pagination-bullet-active {
   width: 1.2rem !important;
-  background-color: red !important;
+  background-color: #FFAF39 !important;
   opacity: 1;
 }
 
 .swiper-pagination-bullet:hover {
-  background-color: rgb(151, 53, 43) !important ;
+  background-color: #b67f2c !important ;
   transform: scale(1.2);
 }
 
@@ -221,7 +278,12 @@ body::-webkit-scrollbar-thumb {
 .platforms img {
   width: 50px;
   height: 50px;
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg) brightness(105%) contrast(101%);
 }
+
+
+
+
 
 .adversting {
   margin-top: 40px;
@@ -255,12 +317,14 @@ body::-webkit-scrollbar-thumb {
   left: 10px;
   width: 50px;
   height: 50px;
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg) brightness(105%) contrast(101%);
 }
 
 .adversting_card img.image {
   width: 100%;
   border-radius: 15px;
   margin-bottom: 15px;
+  
 }
 
 .adversting_card .title {
@@ -273,7 +337,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #FFAF39;
 }
 
 .adversting_card .description {
@@ -309,11 +373,14 @@ p {
 .movies_slider {
   color: white;
   max-width: 100%;
+  margin-bottom: 50px;
 }
+
 
 h2 {
   font-size: 35px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .swiper_movies {
@@ -325,15 +392,33 @@ h2 {
 }
 
 .image_slider {
-  width: 200px;
-  height: 300px;
-  border-radius: 10px;
+  width: 250px;
+  height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 10px;
 }
+
 
 .image_slider:hover {
   transform: scale(1.05);
+  z-index: 30;
+  border: 2px solid #FFAF39;
+}
+
+
+.movie_info {
+  
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #FFAF39;
+  padding: 10px 20px 20px 20px;
+
+  
 }
 
 .movie_info p {
@@ -345,7 +430,7 @@ h2 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: red !important;
+  color: #FFAF39 !important;
   font-size: 20px !important;
   font-weight: 800;
   opacity: 0.7;
@@ -356,7 +441,7 @@ h2 {
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
   text-align: center;
-  color: red;
+  color: #FFAF39;
   transform: scale(1.1);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -366,7 +451,7 @@ h2 {
 }
 
 footer {
-  text-decoration: none;
+  
   background-color: #242222;
   margin-top: 20px;
 }
@@ -382,10 +467,6 @@ footer {
   gap: 20px;
 }
 
-.footer-logo {
-  flex: 1;
-  text-align: left;
-}
 
 .terms-content {
   flex: 1;
