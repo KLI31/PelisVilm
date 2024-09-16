@@ -15,7 +15,7 @@
 <body>
     <header class="navbar">
         <div class="navbar_logo">
-            <h1 class="borde-tex"><a href="#">Vilm<span id="movie">Movie</span></a></h1>
+            <h1><a href="#">Vilm<span id="movie">Movie</span></a></h1>
         </div>
 
         <nav class="menu">
@@ -23,13 +23,23 @@
                 <li><a href="#">Peliculas</a></li>
                 <li><a href="#">Series</a></li>
                 <li><a href="#">Mis favoritos</a></li>
+                <li class="navbar_search_mobile">
+                    <p>Buscar pelicula</p>
+                    <input type="text" placeholder="Busca tu peli favorita">
+                </li>
             </ul>
         </nav>
 
         <div class="navbar_search">
             <input type="text" placeholder="Busca tu peli favorita">
-            <button type="submit"><i class="fas fa-search"></i></button>
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
     <div>
         <section class="swiper">
@@ -84,7 +94,7 @@
             <h2>Acción</h2>
             <section class="swiper_movies">
                 <div class="swiper-wrapper content_image">
-                    <div class="swiper-slide  efecto">
+                    <div class="swiper-slide">
                         <img src="/imagenes/peli-6.jpg" alt="The Nun" class="image_slider">
                         <div class="movie_info">
                             <h2>La Monja 2</h2>
@@ -234,28 +244,116 @@
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="/imagenes/peli-1.jpg" alt="The Nun" class="image_slider">
-                    </div>
+
+                        <div class="movie_info">
+                            <h2>DeadPool</h2>
+                            <span>Accion / comedia</span>
+                            <div class="btn-play">
+                                <a href="/pelicula.html">
+                                    <img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJFJREFUSEvtldENgCAMRI9R3UQnUSfRUdxEvUT/xF6rxMTAN9xrXyEkFF6pcD4qwDT8uaIeQAdgMUvNbLA6WI/wcT/fRiAK4MxlF+xm8IA8gDOXAFlbBEAQu5G0RQGytjcADYA5N5cnAM7BvFkRAKtl1dLb8AAYeKvjSpMKkHREAJNHRwTgebSXey1FFfCDP3kDq4ggGZOIgMsAAAAASUVORK5CYII=" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

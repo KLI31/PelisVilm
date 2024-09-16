@@ -159,3 +159,10 @@ function toggleButton(swiper) {
     nextButton.classList.remove("swiper_button_hidden");
   }
 }
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu");
+  const hamburger = document.querySelector(".hamburger");
+  menu.classList.toggle("active"); // Activa/desactiva el menú
+  hamburger.classList.toggle("active"); // Activa/desactiva la animación del icono
+}
