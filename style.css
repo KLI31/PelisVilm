@@ -24,65 +24,87 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #a1a0a0;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .navbar {
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 75px;
   width: 100%;
   transition: background-color 0.3s ease;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background-color: #1a1919;
-  opacity: 0.8;
   position: fixed;
   top: 0;
   z-index: 40;
+  padding: 0 30px;
 }
 
-.navbar .navbar_logo h1 a {
+#movie {
+  color: #ffaf39;
+}
+
+.navbar_logo h1 a {
   text-decoration: none;
   color: white;
-  font-size: 50px;
-  margin: 0 60px;
+  font-size: 30px;
+  margin: 0;
   cursor: pointer;
 }
 
-.navbar .navbar_search {
-  margin: 0 70px;
-  background-color: white;
-  border-radius: 8px;
+.menu {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  transition: 0.5s;
+  color: #ffaf39;
+}
+
+.navbar_search {
+  margin-left: auto;
+  border-radius: 20px;
+}
+
+.navbar_search input::placeholder {
+  color: #1a1919;
+  font-weight: bold;
 }
 
 .navbar_search input {
   border: none;
-  background-color: white;
-  padding: 15px 15px;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.741);
+  padding: 11px 20px;
+  border-radius: 20px;
   outline: none;
-}
-.navbar_search button {
-  padding: 15px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  outline: none;
-}
-.navbar_search button .fa-search {
-  border-color: white;
-  font-size: 15px;
-}
-
-.navbar_search button:hover {
-  background-color: #8dbcf1;
-  color: white;
-  transition: background-color 0.1s ease-in, color 0.3s ease-in;
+  color: rgb(31, 27, 27);
+  font-weight: bold;
 }
 
 .navbar_scrolled {
-  background-color: #e04a52;
+  background-color: #1a1919;
   opacity: 1;
   transition: background-color ease-in 0.3s;
 }
@@ -148,6 +170,23 @@ body::-webkit-scrollbar-thumb {
   max-width: 30rem;
 }
 
+.btn-play img {
+  border-radius: 50%;
+  background: #ffaf39;
+  height: 36px;
+  position: absolute;
+  bottom: 1rem;
+  left: 11.5rem;
+}
+
+.movie_info h2 {
+  font-size: 30px;
+}
+
+.efecto:hover {
+  transform: scale(1.05);
+}
+
 .section_movie {
   display: flex;
   align-items: center;
@@ -157,7 +196,7 @@ body::-webkit-scrollbar-thumb {
 .btn {
   padding: 10px 30px;
   border: none;
-  background-color: rgb(248, 70, 70);
+  background-color: #ffaf39;
   color: white;
   border-radius: 6px;
   margin-top: 10px;
@@ -201,12 +240,12 @@ body::-webkit-scrollbar-thumb {
 
 .swiper-pagination-bullet-active {
   width: 1.2rem !important;
-  background-color: red !important;
+  background-color: #ffaf39 !important;
   opacity: 1;
 }
 
 .swiper-pagination-bullet:hover {
-  background-color: rgb(151, 53, 43) !important ;
+  background-color: #b67f2c !important ;
   transform: scale(1.2);
 }
 
@@ -221,6 +260,8 @@ body::-webkit-scrollbar-thumb {
 .platforms img {
   width: 50px;
   height: 50px;
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg)
+    brightness(105%) contrast(101%);
 }
 
 .adversting {
@@ -255,6 +296,8 @@ body::-webkit-scrollbar-thumb {
   left: 10px;
   width: 50px;
   height: 50px;
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg)
+    brightness(105%) contrast(101%);
 }
 
 .adversting_card img.image {
@@ -273,7 +316,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #ffaf39;
 }
 
 .adversting_card .description {
@@ -309,11 +352,13 @@ p {
 .movies_slider {
   color: white;
   max-width: 100%;
+  margin-bottom: 50px;
 }
 
 h2 {
   font-size: 35px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .swiper_movies {
@@ -325,15 +370,27 @@ h2 {
 }
 
 .image_slider {
-  width: 200px;
-  height: 300px;
-  border-radius: 10px;
+  width: 250px;
+  height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .image_slider:hover {
   transform: scale(1.05);
+  z-index: 30;
+  border: 2px solid #ffaf39;
+}
+
+.movie_info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #ffaf39;
+  padding: 10px 20px 20px 20px;
 }
 
 .movie_info p {
@@ -345,7 +402,7 @@ h2 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: red !important;
+  color: #ffaf39 !important;
   font-size: 20px !important;
   font-weight: 800;
   opacity: 0.7;
@@ -356,7 +413,7 @@ h2 {
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
   text-align: center;
-  color: red;
+  color: #ffaf39;
   transform: scale(1.1);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -366,7 +423,6 @@ h2 {
 }
 
 footer {
-  text-decoration: none;
   background-color: #242222;
   margin-top: 20px;
 }
@@ -385,6 +441,11 @@ footer {
 .footer-logo {
   flex: 1;
   text-align: left;
+}
+
+.text-footer {
+  color: white;
+  text-decoration: none;
 }
 
 .terms-content {
@@ -412,7 +473,6 @@ footer {
   text-decoration: none;
 }
 
-/* Estilos para pantallas grandes (desktops) */
 @media (min-width: 1024px) {
   .navbar {
     height: 75px;
@@ -432,7 +492,6 @@ footer {
   }
 }
 
-/* Estilos para pantallas medianas (tablets) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .navbar {
     height: 60px;
@@ -452,7 +511,6 @@ footer {
   }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -466,7 +524,7 @@ footer {
     margin: 10px 0;
   }
 
-  .text_navbar_search{
+  .text_navbar_search {
     width: 120px;
     font-size: 9px;
   }
@@ -489,34 +547,34 @@ footer {
     font-size: 15px;
   }
 
-  .title_movie{
+  .title_movie {
     font-size: 20px;
   }
 
-  .line_clamp_3{
+  .line_clamp_3 {
     width: 80%;
     font-size: 10px;
   }
 
-  .info_content_span{
+  .info_content_span {
     font-size: 10px;
   }
-  .platforms{
+  .platforms {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .btn{
+  .btn {
     width: 100px;
-    height:30px;
+    height: 30px;
     font-size: 10px;
   }
 
-  .footer-content{
+  .footer-content {
     display: inline;
   }
 
-  .footer-logo{
+  .footer-logo {
     text-align: center;
   }
 }
