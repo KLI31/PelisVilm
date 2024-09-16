@@ -9,8 +9,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #1a1919;
   scroll-behavior: smooth;
-  
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -27,13 +25,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #a1a0a0;
   border-radius: 10px;
   text-decoration: none;
-  
-  
 }
 
 .navbar {
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 75px;
   width: 100%;
@@ -41,83 +37,87 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   z-index: 40;
-  
+  padding: 0 30px;
 }
 
-
-#movie{
-  color: #FFAF39;
+#movie {
+  color: #ffaf39;
 }
 
-.navbar .navbar_logo h1 a , .footer_logo h2  a{
+.navbar_logo h1 a {
   text-decoration: none;
   color: white;
   font-size: 30px;
-  margin: 0 60px;
+  margin: 0;
   cursor: pointer;
 }
 
-.menu{
-  margin-left: -964px;
-  width: 20%;
+.menu {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 40px;
 }
-.menu ul li{
-  display: inline-block;
+
+.menu ul {
+  display: flex;
   list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-right: 20px;
   font-size: 15px;
   font-weight: bold;
-  color: white;
-  width: 25%;
 }
+
 .menu ul li a {
- text-decoration: none;
- color: white;  
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-
-.menu ul li:hover{
-  background-color: #1A1919;
-  padding: 8px 20px 8px 15px;
-  color: white; 
-  border-radius: 20px;
+.menu ul li:hover {
+  background-color: #ffaf39;
   transition: 0.5s;
-
- 
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
 }
 
-
-.navbar .navbar_search {
-  margin: 0 70px;
+.navbar_search {
+  margin-left: auto;
   border-radius: 20px;
-  
 }
-.navbar_search input::placeholder{
-  color:#1A1919;
+
+.navbar_search input::placeholder {
+  color: #1a1919;
   font-weight: bold;
 }
 
-.navbar_search input:focus{
-  border: 1px solid #FFAF39 ;
+.navbar_search input:focus {
+  border: 1px solid #ffaf39;
 }
 
 .navbar_search input {
   border: none;
-  background:rgba(255, 255, 255, 0.741);
-  padding: 11px 41px;
+  background: rgba(255, 255, 255, 0.741);
+  padding: 11px 20px;
   border-radius: 20px;
   outline: none;
   color: white;
-  
 }
 
 .navbar_scrolled {
-  background-color: #1A1919;
+  background-color: #1a1919;
   opacity: 1;
   transition: background-color ease-in 0.3s;
 }
 
 .navbar_scrolled .menu ul li:hover {
-  background-color:#FFAF39;
+  background-color: #ffaf39;
   transition: 0.5s;
 }
 
@@ -182,28 +182,22 @@ body::-webkit-scrollbar-thumb {
   max-width: 30rem;
 }
 
-.btn-play img{
+.btn-play img {
   border-radius: 50%;
-  background: #FFAF39;
+  background: #ffaf39;
   height: 36px;
   position: absolute;
   bottom: 1rem;
   left: 11.5rem;
 }
 
-.movie_info h2{
+.movie_info h2 {
   font-size: 30px;
- 
 }
 
-
-
-
-
-.efecto:hover{
+.efecto:hover {
   transform: scale(1.05);
 }
-
 
 .section_movie {
   display: flex;
@@ -214,7 +208,7 @@ body::-webkit-scrollbar-thumb {
 .btn {
   padding: 10px 30px;
   border: none;
-  background-color: #FFAF39;
+  background-color: #ffaf39;
   color: white;
   border-radius: 6px;
   margin-top: 10px;
@@ -258,7 +252,7 @@ body::-webkit-scrollbar-thumb {
 
 .swiper-pagination-bullet-active {
   width: 1.2rem !important;
-  background-color: #FFAF39 !important;
+  background-color: #ffaf39 !important;
   opacity: 1;
 }
 
@@ -278,12 +272,9 @@ body::-webkit-scrollbar-thumb {
 .platforms img {
   width: 50px;
   height: 50px;
-  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg) brightness(105%) contrast(101%);
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg)
+    brightness(105%) contrast(101%);
 }
-
-
-
-
 
 .adversting {
   margin-top: 40px;
@@ -317,14 +308,14 @@ body::-webkit-scrollbar-thumb {
   left: 10px;
   width: 50px;
   height: 50px;
-  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg) brightness(105%) contrast(101%);
+  filter: invert(63%) sepia(80%) saturate(444%) hue-rotate(344deg)
+    brightness(105%) contrast(101%);
 }
 
 .adversting_card img.image {
   width: 100%;
   border-radius: 15px;
   margin-bottom: 15px;
-  
 }
 
 .adversting_card .title {
@@ -337,7 +328,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   font-size: 18px;
   margin-bottom: 10px;
-  color: #FFAF39;
+  color: #ffaf39;
 }
 
 .adversting_card .description {
@@ -376,11 +367,13 @@ p {
   margin-bottom: 50px;
 }
 
-
 h2 {
   font-size: 35px;
   margin-bottom: 10px;
   color: white;
+}
+a {
+  text-decoration: none;
 }
 
 .swiper_movies {
@@ -399,26 +392,20 @@ h2 {
   border-radius: 10px;
 }
 
-
 .image_slider:hover {
   transform: scale(1.05);
   z-index: 30;
-  border: 2px solid #FFAF39;
+  border: 2px solid #ffaf39;
 }
 
-
 .movie_info {
-  
-
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: #FFAF39;
+  color: #ffaf39;
   padding: 10px 20px 20px 20px;
-
-  
 }
 
 .movie_info p {
@@ -430,7 +417,7 @@ h2 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #FFAF39 !important;
+  color: #ffaf39 !important;
   font-size: 20px !important;
   font-weight: 800;
   opacity: 0.7;
@@ -441,7 +428,7 @@ h2 {
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
   text-align: center;
-  color: #FFAF39;
+  color: #ffaf39;
   transform: scale(1.1);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -451,7 +438,6 @@ h2 {
 }
 
 footer {
-  
   background-color: #242222;
   margin-top: 20px;
 }
@@ -466,7 +452,6 @@ footer {
   text-align: center;
   gap: 20px;
 }
-
 
 .terms-content {
   flex: 1;

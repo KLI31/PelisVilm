@@ -116,7 +116,7 @@ const SliderMovies = new Swiper(".swiper_movies", {
       toggleButton(this);
     },
   },
-  slidesPerView: 7,
+  slidesPerView: 5,
   spaceBetween: 12,
   breakpoints: {
     640: {
@@ -136,8 +136,8 @@ const SliderMovies = new Swiper(".swiper_movies", {
       spaceBetween: 10,
     },
     1440: {
-      slidesPerView: 7,
-      spaceBetween: 0,
+      slidesPerView: 5,
+      spaceBetween: 10,
     },
   },
   effect: "slide",
