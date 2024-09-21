@@ -1,298 +1,266 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
-
-
 
 body {
-    background: #000;
-    font-family: "Poppins", sans-serif;
-    color: white;
+  background: #000;
+  font-family: "Poppins", sans-serif;
+  color: white;
 }
 
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
-   
+.container-2 {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.pelicula_context{
-    margin-top: 50px;
+.container {
+  padding: 0 20px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
+.pelicula_context {
+  margin-top: 50px;
+}
+
+.movies_slider {
+  color: white;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
 
 .swiper_movies {
-    position: relative;
-  }
-  
-  .content_image {
-    margin-top: 20px;
-  }
-  
-  .image_slider {
-    width: 250px;
-    height: 400px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-  }
-  
-  .image_slider:hover {
-    transform: scale(1.05);
-    z-index: 30;
-    border: 2px solid #ffaf39;
-  }
-  
-  .movie_info {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: #ffaf39;
-    padding: 10px 20px 20px 20px;
-  }
-  
-  .movie_info p {
-    width: 80%;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    overflow-wrap: break-word;
-  }
-  
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #ffaf39 !important;
-    font-size: 20px !important;
-    font-weight: 800;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    display: block;
-  }
-  
-  .swiper-button-next:hover::after,
-  .swiper-button-prev:hover::after {
-    text-align: center;
-    color: #ffaf39;
-    transform: scale(1.1);
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .swiper_button_hidden {
-    display: none !important;
-  }
-
-.pelicula__banner{
-    overflow: hidden;
+  position: relative;
 }
 
-.pelicula__banner  img{
-    width: 100%;
-    height: 32rem;
-    
+.content_image {
+  margin-top: 20px;
 }
 
-.pelicula__informacion img{
-    height: 20rem;
-    margin-top: -160px;
-    border-radius: 10px;
-    
+.image_slider {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
-.pelicula__nombre{
-    margin-left: 270px;
-    margin-top: -150px;
-    
+.image_slider:hover {
+  transform: scale(1.05);
+  z-index: 30;
+  border: 2px solid #ffaf39;
+}
+.movie_info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #ffaf39;
+  padding: 10px 20px 20px 20px;
 }
 
+.movie_info p {
+  width: 80%;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffaf39 !important;
+  font-size: 20px !important;
+  font-weight: 800;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  display: block;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  text-align: center;
+  color: #ffaf39;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.swiper_button_hidden {
+  display: none !important;
+}
+
+.pelicula__banner {
+  overflow: hidden;
+}
+
+.pelicula__banner img {
+  width: 100%;
+  height: 32rem;
+}
+
+.pelicula__informacion img {
+  height: 20rem;
+  margin-top: -160px;
+  border-radius: 10px;
+}
+
+.pelicula__nombre {
+  margin-left: 270px;
+  margin-top: -150px;
+}
 
 .pelicula__nombre img {
-    height: 2rem;
-    margin-top: 10px;
-    
+  height: 2rem;
+  margin-top: 10px;
 }
 
-.pelicula__nombre p{
-    font-size: 30px;
-    font-weight: 700;
-    
-    
+.pelicula__nombre p {
+  font-size: 30px;
+  font-weight: 700;
 }
 
-
-.pelicula__nombre p a{
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
-    margin-left: 50px;
-    background-color:#ffda18;
-    padding: 10px 40px 10px 40px;
-    text-align: center;
-    border-radius: 2px;
+.pelicula__nombre p a {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-left: 50px;
+  background-color: #ffda18;
+  padding: 10px 40px 10px 40px;
+  text-align: center;
+  border-radius: 2px;
 }
 
-
-
-
-.pelicula__informacion-datos{
-    margin-top: 100px;
+.pelicula__informacion-datos {
+  margin-top: 100px;
 }
-
 
 /** seccion de peliculas*/
 
-.contenido__mover{
-        margin-left: 150px;
+.contenido__mover {
+  margin-left: 150px;
 }
-.reproductor__botones{
-    margin: 70px 0 20px 0;
+.reproductor__botones {
+  margin: 70px 0 20px 0;
 }
 
-.boton{
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
-    margin-left: 10px;
-    background-color:#ffda18;
-    padding: 5px 20px 5px 20px;
-    text-align: center;
-    border-radius: 2px;
-    border-radius: 50px;
+.boton {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+  background-color: #ffda18;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  border-radius: 2px;
+  border-radius: 50px;
 }
 
 .movie_info h2 {
-    font-size: 30px;
-  }
-  
-  .section_movie {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  font-size: 30px;
+}
 
+.section_movie {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /** seccion de recomendadas */
 
-
-
-.swiper h2{
-
-    color: white;
-    font-size: 50px;
-    margin-bottom: 30px;
-
+.swiper h2 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .swiper {
-    margin: 100px 0 0 200px;
-    width: 100%;
-    height: px;
-    display: flex;
-    justify-content: center;
-    
+  margin: 100px 0 0 200px;
+  width: 100%;
+  height: px;
+  display: flex;
+  justify-content: center;
 }
 
-
-.swiper .swiper-slide img {
-    border-radius: 10px;
-    width: 76%;
-    height: 68%;
-    object-fit: cover;
-    margin-left: 110px;
-    
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+  margin-top: -150px;
 }
 
-.swiper-slide{
-    margin-left: -100px;
-    
+.slider-btns {
+  margin-top: 250px;
 }
-
-.swiper-button-next:after, .swiper-button-prev:after{
-    color: white;
-    margin-top: -150px;
-    
-}
-
-
-.slider-btns{
-    margin-top: 250px;
-} 
-
 
 @media (max-width: 600px) {
-    
+  .pelicula__informacion img {
+    height: 12rem;
+    margin-top: -100px;
+  }
 
-    .pelicula__informacion img {
-        height: 12rem; 
-        margin-top: -100px;
-    }
+  .pelicula__nombre {
+    font-size: 10px;
+    margin-left: 0;
+    margin-top: -200px;
+    text-align: center;
+  }
 
-    .pelicula__nombre {
-        font-size: 10px;
-        margin-left: 0;
-        margin-top: -200px;
-        text-align: center;  
-    }
+  .pelicula__nombre p {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
 
-    .pelicula__nombre p {
-        font-size: 1.5rem;
-        margin-left: 0;
-    }
+  .pelicula__nombre p a {
+    padding: 8px 30px;
+  }
 
-    .pelicula__nombre p a {
-        padding: 8px 30px;  
-    }
+  .reproductor__botones {
+    margin: 40px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .reproductor__botones {
-        margin: 40px 0 20px 0;
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
+  .reproductor iframe {
+    width: 100%;
+    height: 100%;
+  }
 
-    .reproductor iframe {
-        width: 100%;  
-        height: 100%; 
-    }
+  .swiper {
+    margin: 50px 0;
+  }
 
-    .swiper {
-        margin: 50px 0;  
-    }
-
-    .swiper h2 {
-        font-size: 20px;  
-    }
+  .swiper h2 {
+    font-size: 20px;
+  }
 }
 
-
 @media (max-width: 1024px) {
-    .pelicula__banner img {
-        height: 24rem;  
-    }
+  .pelicula__banner img {
+    height: 24rem;
+  }
 
-    .pelicula__informacion img {
-        height: 15rem; 
-        margin-top: -120px;
-    }
+  .pelicula__informacion img {
+    height: 15rem;
+    margin-top: -120px;
+  }
 
-    .pelicula__nombre {
-        margin-left: 50px;
-        margin-top: -120px;
-    }
+  .pelicula__nombre {
+    margin-left: 50px;
+    margin-top: -120px;
+  }
 
-    .reproductor iframe {
-        width: 100%;  
-        height: 400px; 
-    }
+  .reproductor iframe {
+    width: 100%;
+    height: 400px;
+  }
 
-    .swiper-slide img {
-        width: 80%;
-        height: 200px;
-    }
+  .image_slider {
+    width: 200px;
+    height: 300px;
+  }
 }
