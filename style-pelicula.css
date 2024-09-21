@@ -22,6 +22,72 @@ body {
    
 }
 
+.pelicula_context{
+    margin-top: 50px;
+}
+
+
+.swiper_movies {
+    position: relative;
+  }
+  
+  .content_image {
+    margin-top: 20px;
+  }
+  
+  .image_slider {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .image_slider:hover {
+    transform: scale(1.05);
+    z-index: 30;
+    border: 2px solid #ffaf39;
+  }
+  
+  .movie_info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #ffaf39;
+    padding: 10px 20px 20px 20px;
+  }
+  
+  .movie_info p {
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    overflow-wrap: break-word;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #ffaf39 !important;
+    font-size: 20px !important;
+    font-weight: 800;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    display: block;
+  }
+  
+  .swiper-button-next:hover::after,
+  .swiper-button-prev:hover::after {
+    text-align: center;
+    color: #ffaf39;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .swiper_button_hidden {
+    display: none !important;
+  }
+
 .pelicula__banner{
     overflow: hidden;
 }
@@ -97,7 +163,18 @@ body {
     padding: 5px 20px 5px 20px;
     text-align: center;
     border-radius: 2px;
+    border-radius: 50px;
 }
+
+.movie_info h2 {
+    font-size: 30px;
+  }
+  
+  .section_movie {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
 
 /** seccion de recomendadas */
@@ -145,4 +222,77 @@ body {
 
 .slider-btns{
     margin-top: 250px;
+} 
+
+
+@media (max-width: 600px) {
+    
+
+    .pelicula__informacion img {
+        height: 12rem; 
+        margin-top: -100px;
+    }
+
+    .pelicula__nombre {
+        font-size: 10px;
+        margin-left: 0;
+        margin-top: -200px;
+        text-align: center;  
+    }
+
+    .pelicula__nombre p {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .pelicula__nombre p a {
+        padding: 8px 30px;  
+    }
+
+    .reproductor__botones {
+        margin: 40px 0 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .reproductor iframe {
+        width: 100%;  
+        height: 100%; 
+    }
+
+    .swiper {
+        margin: 50px 0;  
+    }
+
+    .swiper h2 {
+        font-size: 20px;  
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .pelicula__banner img {
+        height: 24rem;  
+    }
+
+    .pelicula__informacion img {
+        height: 15rem; 
+        margin-top: -120px;
+    }
+
+    .pelicula__nombre {
+        margin-left: 50px;
+        margin-top: -120px;
+    }
+
+    .reproductor iframe {
+        width: 100%;  
+        height: 400px; 
+    }
+
+    .swiper-slide img {
+        width: 80%;
+        height: 200px;
+    }
 }

@@ -117,7 +117,7 @@ const SliderMovies = new Swiper(".swiper_movies", {
     },
   },
   slidesPerView: 2,
-  spaceBetween: 15,
+  spaceBetween: 8,
   breakpoints: {
     640: {
       slidesPerView: 1,
